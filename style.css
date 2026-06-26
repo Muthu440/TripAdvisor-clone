@@ -6,9 +6,12 @@
 body{
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: weight;
+  font-weight: 400;
   font-style: normal;
-
+  overflow-x: hidden;
+}
+img{
+  max-width: 100%;
 }
 .logo img{
     height: 100%;
@@ -211,6 +214,7 @@ body{
 }
 .banner__image{
     width: 600px;
+    max-width: 100%;
     position: relative;
 }
 .banner__image img{
@@ -684,14 +688,14 @@ hr{
     width:45px;
 }
 .copyright__terms{
-    color: 002B11;
+    color: #002B11;
     font-size: 15px;
     margin-top: 15px;
     margin-left: -57px;
 }
 .links{
     margin-top:10px;
-    font-size: 30px;
+    font-size: 14px;
     font-weight: bold;
 }
 .links a{
@@ -720,82 +724,158 @@ hr{
 .social-media__logo{
     margin-top: 10px;
 }
+
+@media screen and (max-width: 992px) {
+
+  .logo{
+    margin-left: 20px;
+  }
+
+  .navbar-sec__1{
+    margin-left: 0;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+
+  .navbar-item,
+  .navbar-items{
+    padding: 10px 14px;
+  }
+
+  
+  .banner{
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .banner__image{
+    width: 100%;
+  }
+
+  .banner__content{
+    width: 100%;
+  }
+
+  .banner__content h1{
+    font-size: 40px;
+  }
+
+  .divider-2{
+    display: none;
+  }
+
+  
+  .donate-section{
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .donate__content h2{
+    font-size: 32px;
+  }
+
+  
+  .hero{
+    flex-direction: column;
+  }
+
+  .left-content{
+    width: 100%;
+    height: auto;
+    padding: 50px 30px;
+  }
+
+  .right-hero{
+    height: auto;
+  }
+
+  
+  .footer-top{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
 @media screen and (max-width: 600px) {
 
   .navbar{
-    display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 15px;
-    font-size: 10px;
   }
-
   .logo{
     margin: 0;
-    font-size: 24px;
   }
-
   .logo img{
     width: 140px;
     height: auto;
   }
 
   .navbar-sec__1{
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 15px;
-    gap: 10px;
-    font-size: 10px;
+    margin: 15px 0 0;
+    gap: 8px;
   }
 
   .navbar-item{
-    margin: 0;
+    margin-top: 0;
     padding: 8px 12px;
     font-size: 14px;
   }
 
-  .navbar-item img{
-    height: 18px;
-  }
   .navbar-items{
     display: none;
   }
 
   .navbar-item__btn button{
-    font-size: 5px;
-    display: none;
+    margin-top: 0;
   }
 
   .sec-2{
     font-size: 30px;
+    margin-top: 40px;
   }
 
   .menu__item{
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    gap: 15px;
     padding: 10px;
-  }
-
-  .category img{
-    height: 20px;
-  }
-  .category{
-    font-size: 10px;
+    font-size: 16px;
   }
   .search-bar{
-    display: none;
-  }
-  .banner__image{
-    display: flex;
-    object-fit: cover;
-    padding: 0;
-    margin: 0;
-  }
-  .banner__content{
-    display: flex;
+    width: 90%;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    gap: 8px;
   }
 
+  .search-bar input{
+    width: 100%;
+  }
+
+  .ask-ai,
+  .search-btn{
+    flex: 1;
+    margin: 0;
+  }
+
+  .banner__content h1{
+    font-size: 32px;
+  }
+
+  
+  .footer-top{
+    grid-template-columns: 1fr;
+  }
+
+  .footer-bottom{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .copyright__terms{
+    margin-left: 0;
+  }
 }
